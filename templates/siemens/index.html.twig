@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étoile de Siemens{% endblock %}
+
+{% block body %}
+    <h1>Étoile de Siemens</h1>
+
+    <p>
+        <a href="{{ path('app_siemens') }}" class="btn btn-primary">Générer une nouvelle étoile</a>
+    </p>
+
+    <img src="{{ asset(image_path) }}" alt="Étoile générée" style="max-width: 100%; height: auto;">
+
+    <form method="post">
+        <label for="note">Ajouter une note :</label><br>
+        <textarea name="note" id="note" rows="5" style="width: 100%;"></textarea>
+    </form>
+{% endblock %}
